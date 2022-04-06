@@ -1,13 +1,12 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Home from '../components/pages/home/Home';
 import LoginPage from '../components/pages/login/LoginPage';
 import { Routes, Route } from 'react-router-dom';
-import { AuthContext } from '../context/AuthContext';
     
 
 const Router = () => {
 
-    const{ user, setUser} = useContext(AuthContext);
+    const user = JSON.parse(localStorage.getItem('user'))
 
     if(user) {
         return <Routes>

@@ -1,10 +1,7 @@
-import React, { useContext } from "react";
-import { AuthContext } from "../context/AuthContext";
+import React from "react";
 import { firebase, auth } from '../service/Firebase';
 
 const ButtonLogin = () => {
-
-  const {user, setUser} = useContext(AuthContext);
     
   const handleOnClickButton = async () => {
       const provider = new firebase.auth.GoogleAuthProvider();
@@ -13,12 +10,9 @@ const ButtonLogin = () => {
       if(result.user){
         const {uid, photoURL, displayName, email} = result.user;
 
-        setUser({
-          id: uid,
-          photo: photoURL,
-          user: displayName,
-          email: email
-        })
+        let user = {name: displayName, id: uid, email: email, photo: photoURL}
+        localStorage.setItem('user', JSON.stringify(user));
+        document.location.reload();
       }
   }
 
