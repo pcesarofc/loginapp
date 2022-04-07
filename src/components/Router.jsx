@@ -1,24 +1,23 @@
-import React from 'react';
-import Home from '../components/pages/home/Home';
-import LoginPage from '../components/pages/login/LoginPage';
+import React from "react";
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import Login from './pages/Login';
+import ClientArea from './pages/ClientArea';
+import ProtectedRouter from "./ProtectedRoutes";
 import { Routes, Route } from 'react-router-dom';
-    
 
 const Router = () => {
 
-    const user = JSON.parse(localStorage.getItem('user'))
-
-    if(user) {
-        return <Routes>
-            <Route path = "/" element = {<Home/>} />
-        </Routes>
-    }
     return <Routes>
-        <Route path = "/" element = {<LoginPage/>} />
+        <Route path = "/" element = {<Home/>} />
+        <Route path = "/contact" element = {<Contact/>} />
+        
+        {/* IMPORTAÇÃO DO COMPONENTE ProtectedRouter que retorna o componente login caso o usuário esteja deslogado. */}
+        <Route element={<ProtectedRouter/>}>
+            <Route path = "/client" element = {<ClientArea/>} />
+        </Route>
+        <Route path = "/login" element = {<Login/>} />
     </Routes>
-   
-    
-    
 }
 
 export default Router;

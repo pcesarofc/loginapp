@@ -1,16 +1,18 @@
 //ABSTRACT
-@import './abstract/mixins';
 @import './abstract/variables';
+@import './abstract/mixins';
 
 //COMPONENTS
-@import './components/loginButton';
 
 
 //LAYOUT
 @import './layout/header';
-@import './layout/footer';
-
+@import './layout/navigator';
 
 //PAGES
-@import './pages/loginPage';
-@import './pages/homePage';
+@import './pages/login';
+
+
+body{
+    @include margin (0, 0, 0, 0);
+}

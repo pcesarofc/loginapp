@@ -1,0 +1,15 @@
+.navigator-page{
+    @include dimension(40%, auto);
+
+    ul{
+        @include display(flex, row, space-evenly, center);
+
+        li{
+            list-style: none;
+
+            a{
+                @include text(center, none);
+            }
+        }
+    }
+}

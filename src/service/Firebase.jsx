@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
+//FUNÇÕES NECESSÁRIAS PARA O LOGIN FUNCIONAR
 
 const firebaseConfig = {
     apiKey: "AIzaSyBphSWJC8Cas_W8nvCE1VKsnkrrqsg8mxs",

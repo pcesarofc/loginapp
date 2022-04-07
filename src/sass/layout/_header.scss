@@ -1,0 +1,19 @@
+.header-page{
+    @include dimension(auto, 100px);
+    @include display(flex, row, space-evenly, center);
+    @include color(gray, white);
+
+    .logo{
+        @include dimension(100px, 100px);
+        @include color(black, white);
+    }
+
+    button{
+        @include dimension(50px, 25px);
+    }
+
+    img{
+        @include dimension(80px, auto);
+        @include border-radius(1000px, 1000px, 1000px, 1000px);
+    }
+}
