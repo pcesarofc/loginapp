@@ -1,11 +1,9 @@
 .header-page{
     @include dimension(auto, 100px);
     @include display(flex, row, space-evenly, center);
-    @include color(gray, white);
 
     .logo{
-        @include dimension(100px, 100px);
-        @include color(black, white);
+        @include dimension(auto, 100px);
     }
 
     button{

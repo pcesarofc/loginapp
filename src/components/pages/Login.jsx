@@ -1,5 +1,7 @@
 import React from "react";
 import { firebase, auth } from '../../service/Firebase';
+import LogoImage from '../../assets/Logo.png';
+import { FaGoogle } from 'react-icons/fa'
 
 const Login = () => {
 
@@ -9,10 +11,24 @@ const Login = () => {
         await auth.signInWithPopup(provider);
     }
 
-    return <main>
+    return <main className="login-page">
         <article>
             <section>
-                <button onClick={handleOnClickButton}> Login com Google</button>
+                <div className="form">
+                    <img src={LogoImage} alt="Logo" />
+                    <div className="inputs">
+                        <input type="email" name="email" id="email" placeholder="Email" autoComplete="off" itemScope="search" />
+                        <input type="password" name="password" id="password" placeholder="Senha" />
+                        <button className="login"> Login </button>
+                    </div>
+                    <p>ou</p>
+                    <button onClick={handleOnClickButton} className="google-login">
+                        <div className="icon">
+                            <FaGoogle />
+                        </div>
+                        Entre com Google
+                    </button>
+                </div>
             </section>
         </article>
     </main>

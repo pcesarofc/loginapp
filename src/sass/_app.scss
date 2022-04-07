@@ -15,4 +15,7 @@
 
 body{
     @include margin (0, 0, 0, 0);
+    background-image: url('../assets/Background.png');
+    background-size: 100vw 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

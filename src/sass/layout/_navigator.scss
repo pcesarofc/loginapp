@@ -1,5 +1,5 @@
 .navigator-page{
-    @include dimension(40%, auto);
+    @include dimension(400px, auto);
 
     ul{
         @include display(flex, row, space-evenly, center);

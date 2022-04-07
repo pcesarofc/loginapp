@@ -3,6 +3,8 @@ import Navigator from "./Navigator";
 import { AuthContext } from './contexts/AuthContext';
 import { firebase } from '../service/Firebase';
 import { useNavigate } from "react-router-dom";
+import LogoImage from '../assets/Logo.png';
+import NoUser from '../assets/no-user.png';
 
 const Header = () => {
     const { usuario, setUsuario } = useContext(AuthContext);
@@ -23,16 +25,16 @@ const Header = () => {
     //RENDERIZA DE ACORDO COM O ESTADO DO USUÁRIO
     return (usuario)
         ? <header className="header-page">
-            <div className="logo">LOGO</div>
+            <img src={LogoImage} className="logo" />
             <Navigator />
             <img src={usuario.photo} alt="User Photo" />
             <button onClick={Deslogar}>Sair</button>
         </header>
 
         : <header className="header-page">
-            <div className="logo">LOGO</div>
+            <img src={LogoImage} className="logo" />
             <Navigator />
-            <img src="" alt="User Photo" />
+            <img src={NoUser} alt="User Photo" />
             <button onClick={LoginButton}>Login</button>
         </header>
 }

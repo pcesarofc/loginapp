@@ -1,7 +1,119 @@
 .login-page{
     article{
+        
         section{
-            form{
+            @include display(flex, column, center, center);
+            
+            .form{
+                @include display(flex, column, space-evenly, center);
+                @include dimension(500px, 500px);
+                @include border-radius(20px, 20px, 20px, 20px);
+                background-color: rgba(255, 255, 255, 0.123);
+                -webkit-backdrop-filter: blur(8px);
+                backdrop-filter: blur(8px);
+                
+
+                img{
+                    @include dimension(250px, auto);
+                }
+
+                div{
+                    @include display(flex, column, center, center);
+
+                    input{
+                        @include dimension(300px, 30px);
+                        @include margin(0, 10px, 0, 0);
+                        @include border(0px, none, rgb(0, 0, 0));
+                        @include color(transparent, white);
+                        border-bottom: 1px solid rgb(255, 255, 255);
+
+                        &::placeholder{
+                            color: white;
+                        }
+
+                        &:focus {
+                            box-shadow: 0 0 0 0;
+                            outline: 0;
+                        }
+                    }
+
+                    .login{
+                        @include dimension(200px, 40px);
+                        @include border(0px, none, gray);
+                        @include font(14px, 700);
+                        @include margin(20px, 0, 0, 0);
+
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                p{
+                    @include font(18px, 300);
+                    @include color(transparent, white);
+                }
+
+                .google-login{
+                    @include dimension(200px, 40px);
+                    @include display(flex, row, space-evenly, center);
+                    @include border(0px, none, gray);
+                    @include margin(0, 30px, 0, 0);
+                    @include color(#D14A3E, white);
+                    @include font(14px, 700);
+                    
+                    &:hover{
+                        cursor: pointer;
+                    }
+
+                    .icon{
+                        svg{
+                            @include dimension(20px, auto)
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 600px){
+    .login-page{
+        article{
+            section{
+                .form{
+                    @include dimension(300px, 500px);
+
+                    img{
+                        @include dimension(150px, auto);
+                    }
+    
+                    div{
+                        input{
+                            @include dimension(200px, 30px);
+                        }
+    
+                        .login{
+                            @include dimension(150px, 40px);
+                        }
+                    }
+    
+                    p{
+                        @include font(14px, 300);
+                    }
+
+                    .google-login{
+                        @include dimension(150px, 40px);
+    
+                        .icon{
+                            svg{
+                                @include dimension(20px, auto)
+                            }
+                        }
+                    }
+    
+                }
             }
         }
     }

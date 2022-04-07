@@ -21,8 +21,6 @@ function App() {
           email: user.email
         });
 
-      } else {
-        throw new Error('O usuário não está logado!');
       }
     });
   }, []);
