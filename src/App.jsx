@@ -7,12 +7,12 @@ import { auth } from './service/Firebase';
 import './sass/_app.scss';
 
 function App() {
-  const{ setUsuario } = useContext(AuthContext);
+  const { setUsuario } = useContext(AuthContext);
 
   //VERIFICA SE O USUÁRIO ESTÁ LOGADO E SALVA OS DADOS NO CONTEXT USUÁRIO
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
-      if(user){
+      if (user) {
 
         setUsuario({
           uid: user.uid,
@@ -20,8 +20,8 @@ function App() {
           name: user.displayName,
           email: user.email
         });
-        
-      } else{
+
+      } else {
         throw new Error('O usuário não está logado!');
       }
     });
@@ -30,8 +30,8 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header/>
-        <Router/>
+        <Header />
+        <Router />
       </BrowserRouter>
     </div>
   );

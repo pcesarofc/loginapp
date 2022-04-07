@@ -3,8 +3,8 @@ import { AuthContext } from '../contexts/AuthContext';
 
 const ClientArea = () => {
 
-    const{ usuario } = useContext(AuthContext);
-    
+    const { usuario } = useContext(AuthContext);
+
     return <main>
         <article>
             <section>

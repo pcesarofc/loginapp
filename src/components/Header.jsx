@@ -11,7 +11,7 @@ const Header = () => {
     //DESLOGA O USUÁRIO PELO FIREBASE E SETA O USUARIO COMO NULO NA APLICAÇÃO
     function Deslogar() {
         firebase.auth().signOut().then(() => {
-          setUsuario()
+            setUsuario()
         })
         navigate("/")
     }
@@ -19,22 +19,22 @@ const Header = () => {
     function LoginButton() {
         navigate("/login")
     }
-    
+
     //RENDERIZA DE ACORDO COM O ESTADO DO USUÁRIO
-    return (usuario) 
-    ? <header className="header-page">
-        <div className="logo">LOGO</div>
-        <Navigator/>
-        <img src={usuario.photo} alt="User Photo"/>
-        <button onClick={Deslogar}>Sair</button>
-    </header>
-    
-    : <header className="header-page">
-        <div className="logo">LOGO</div>
-        <Navigator/>
-        <img src="" alt="User Photo"/>
-        <button onClick={LoginButton}>Login</button>
-    </header>
+    return (usuario)
+        ? <header className="header-page">
+            <div className="logo">LOGO</div>
+            <Navigator />
+            <img src={usuario.photo} alt="User Photo" />
+            <button onClick={Deslogar}>Sair</button>
+        </header>
+
+        : <header className="header-page">
+            <div className="logo">LOGO</div>
+            <Navigator />
+            <img src="" alt="User Photo" />
+            <button onClick={LoginButton}>Login</button>
+        </header>
 }
 
 export default Header;

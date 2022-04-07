@@ -9,14 +9,14 @@ import { Routes, Route } from 'react-router-dom';
 const Router = () => {
 
     return <Routes>
-        <Route path = "/" element = {<Home/>} />
-        <Route path = "/contact" element = {<Contact/>} />
-        
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+
         {/* IMPORTAÇÃO DO COMPONENTE ProtectedRouter que retorna o componente login caso o usuário esteja deslogado. */}
-        <Route element={<ProtectedRouter/>}>
-            <Route path = "/client" element = {<ClientArea/>} />
+        <Route element={<ProtectedRouter />}>
+            <Route path="/client" element={<ClientArea />} />
         </Route>
-        <Route path = "/login" element = {<Login/>} />
+        <Route path="/login" element={<Login />} />
     </Routes>
 }
 

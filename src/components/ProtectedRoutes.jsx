@@ -10,7 +10,7 @@ import { AuthContext } from "./contexts/AuthContext";
 const ProtectedRouter = () => {
     const { usuario } = useContext(AuthContext);
 
-    return (usuario) ? <ClientArea/> : <Navigate to="/login"/>
+    return (usuario) ? <ClientArea /> : <Navigate to="/login" />
 }
 
 export default ProtectedRouter;
