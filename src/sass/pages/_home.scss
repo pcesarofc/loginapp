@@ -1,0 +1,14 @@
+.home-page{
+    article{
+        section{
+            @include dimension(100vw, auto);
+            @include display(flex, column, space-around, center);
+            @include color(transparent, white);
+            
+            h1{
+                @include margin (100px, 0, 0, 0);
+                @include font(30px, 700)
+            }
+        }
+    }
+}

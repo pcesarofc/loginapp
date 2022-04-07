@@ -1,14 +1,18 @@
 import React from "react";
-import { firebase, auth } from '../../service/Firebase';
 import LogoImage from '../../assets/Logo.png';
-import { FaGoogle } from 'react-icons/fa'
+import { firebase, auth } from '../../service/Firebase';
+import { useNavigate } from "react-router-dom";
+import { FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
+
+    let navigate = useNavigate();
 
     // FUNÇÃO ASSÍNCRONA QUE FAZ O LOGIN NO GOOGLE A PARTIR DE UM POPUP
     const handleOnClickButton = async () => {
         const provider = new firebase.auth.GoogleAuthProvider();
-        await auth.signInWithPopup(provider);
+        await auth.signInWithPopup(provider)
+        navigate("/client")
     }
 
     return <main className="login-page">

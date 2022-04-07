@@ -20,7 +20,6 @@ function App() {
           name: user.displayName,
           email: user.email
         });
-
       }
     });
   }, []);

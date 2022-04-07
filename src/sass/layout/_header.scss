@@ -5,13 +5,22 @@
     .logo{
         @include dimension(auto, 100px);
     }
-
-    button{
-        @include dimension(50px, 25px);
-    }
-
+    
     img{
         @include dimension(80px, auto);
         @include border-radius(1000px, 1000px, 1000px, 1000px);
     }
+
+    button{
+        @include dimension(50px, 30px);
+        @include color(#D14A3E, white);
+        @include border(0px, none, black);
+        @include font(14px, 700);
+        
+        &:hover{
+            cursor: pointer;
+            @include color(#d8574c, white);
+        }
+    }
+    
 }

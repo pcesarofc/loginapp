@@ -1,6 +1,5 @@
 import React from "react";
 import Home from './pages/Home';
-import Contact from './pages/Contact';
 import Login from './pages/Login';
 import ClientArea from './pages/ClientArea';
 import ProtectedRouter from "./ProtectedRoutes";
@@ -10,7 +9,6 @@ const Router = () => {
 
     return <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
 
         {/* IMPORTAÇÃO DO COMPONENTE ProtectedRouter que retorna o componente login caso o usuário esteja deslogado. */}
         <Route element={<ProtectedRouter />}>

@@ -1,0 +1,12 @@
+.client-page{
+    article{
+        section{
+            @include display(flex, column, space-around, center);
+            @include color(transparent, white);
+
+            h1{
+                @include margin(100px, 0, 0, 0);
+            }
+        }
+    }
+}

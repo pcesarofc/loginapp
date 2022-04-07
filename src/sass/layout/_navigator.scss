@@ -3,12 +3,15 @@
 
     ul{
         @include display(flex, row, space-evenly, center);
+        @include padding(0, 0, 0, 0);
 
         li{
             list-style: none;
 
             a{
                 @include text(center, none);
+                @include font(18px, 700);
+                @include color(transparent, white);
             }
         }
     }
