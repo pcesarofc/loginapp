@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import ClientArea from "./pages/ClientArea";
-import Login from "./pages/Login";
 import { Navigate } from "react-router-dom";
 import { AuthContext } from "./contexts/AuthContext";
 
