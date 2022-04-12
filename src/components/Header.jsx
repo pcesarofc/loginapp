@@ -27,14 +27,14 @@ const Header = () => {
         ? <header className="header-page">
             <Link to="/"><img src={LogoImage} className="logo" /></Link>
             <Navigator />
-            <img src={usuario.photo} alt="User Photo" />
+            <img src={usuario.photo} alt="User Photo" className="user-img" />
             <button onClick={Deslogar}>Sair</button>
         </header>
 
         : <header className="header-page">
             <Link to="/"><img src={LogoImage} className="logo" /></Link>
             <Navigator />
-            <img src={NoUser} alt="User Photo" />
+            <img src={NoUser} alt="User Photo" className="user-img" />
             <button onClick={LoginButton}>Login</button>
         </header>
 }

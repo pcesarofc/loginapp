@@ -24,3 +24,13 @@
     }
     
 }
+
+@media screen and (max-width: 780px){
+    .header-page{
+        
+        img{
+            @include display(none, row, center, center);
+        }
+        
+    }
+}
